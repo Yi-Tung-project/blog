@@ -1,0 +1,81 @@
+<html>
+  <head>
+    
+	<meta charset="utf-8">     
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">     
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">  
+	
+	<link rel="styleSheet" href="Theme.css" />  <!--將自己設定的主題載入-->
+	<script src="info.js"></script>
+	<script>
+	  function initialBody() {
+		initial();
+		var footerElement = document.getElementById('footer');
+		footerElement.innerHTML = getFooterContent();
+		var headerElement = document.getElementById('header');
+		headerElement.innerHTML = getHeaderContent();
+		
+		loadStore();
+	  }
+	  
+	  function loadStore() {
+		var mTable = document.getElementById('mTable');
+	  }
+	  
+	  function changeState(name) {
+		
+	  }
+	</script>
+  </head>
+  
+  <body onload="initialBody()">
+    <header id="header">
+	</header>
+	
+	<main>
+	  <div class="content-title">
+	    個人資料
+	  </div>
+	  
+	  <div class="content">
+		
+	  </div>
+	  
+	  <div class="content-title">
+	    證照
+	  </div>
+	  
+	  <div class="content">
+		<!--ul>
+		    <li></li>
+		</ul-->
+	  </div>
+	  
+	  
+	  <div class="content-title">
+	    專長
+	  </div>
+	  
+	  <div class="content">
+		
+	  </div>
+	  
+	  <div class="content-title">
+	    經歷
+	  </div>
+	  
+	  <div class="content">
+		
+	  </div>
+	  
+	  
+	  
+	  
+	</main>
+	
+	<footer id="footer">
+	</footer>
+	
+  </body>
+</html>

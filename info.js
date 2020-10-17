@@ -17,8 +17,8 @@ function getHeaderContent() {
 	content += '<div>';
 	content += '<ul class="navbar-nav">';
 	content += '<li><a href="#" class="nav-link" onClick=jumpTo("Home.html")>首頁</a></li>';
-//	content += '<li><a href="#" class="nav-link" onClick=jumpTo("")>自傳</a></li>';
-//	content += '<li><a href="#" class="nav-link" onClick=jumpTo("")>履歷表</a></li>';
+	content += '<li><a href="#" class="nav-link" onClick=jumpTo("Resume.html")>履歷表</a></li>';
+	content += '<li><a href="#" class="nav-link" onClick=jumpTo("Autobiography.html")>自傳</a></li>';
 	
 	content += '</ul>';
 	content += '</div>';
