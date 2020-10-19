@@ -1,0 +1,102 @@
+<html>
+  <head>
+    
+	<meta charset="utf-8">     
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">     
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">  
+	
+	<link rel="styleSheet" href="Theme.css" />  <!--將自己設定的主題載入-->
+	<script src="info.js"></script>
+	<script>
+	  function initialBody() {
+		initial();
+		var footerElement = document.getElementById('footer');
+		footerElement.innerHTML = getFooterContent();
+		var headerElement = document.getElementById('header');
+		headerElement.innerHTML = getHeaderContent();
+		
+		loadStore();
+	  }
+	  
+	  function loadStore() {
+		var aTable = document.getElementById('aTable');
+		var dsaTable = document.getElementById('dsaTable');
+		var tableTitle = ['店家：','地址：','電話：'];
+		var aTableInfo = [['Q比Kitchen','高雄市新興區南海街16號','07-2227800']
+						 ,['赤燒分子料理','高雄市新興區東海街22-1號','0988589199']
+						 ,['葉家小卷米粉','臺南市中西區國華街二段142號','06-2226142']];
+		var dsaTableInfo = [['【吉胤家】橫浜家系ラーメン','高雄市三民區慶雲街105號','從缺']
+						   ,['藝麻麻 麻辣鴨血 正忠店','高雄市三民區正忠路136號','0900136136']
+						   ,['惦堂炸黑輪','高雄市前金區榮安街125號之2','0915915586']];
+		
+		setTableItem(tableTitle,aTableInfo,aTable);
+		setTableItem(tableTitle,dsaTableInfo,dsaTable);
+	  }
+	  
+	  function setTableItem(tableTitle,tableInfo,tableObj) {
+		var cIndex = 0;
+		tableInfo.forEach(function (items) {
+			var rIndex = 0;
+			items.forEach(function (item) {
+				var row = tableObj.insertRow(cIndex++);
+				var cell = row.insertCell(0);
+				cell.innerHTML = tableTitle[rIndex++];
+				
+				cell = row.insertCell(1);
+				cell.innerHTML = item;
+			});
+			var rInterval = tableObj.insertRow(cIndex++);
+			var cInterval = rInterval.insertCell(0);
+			cInterval.innerHTML = '&nbsp;';
+		});
+	  }
+	</script>
+  </head>
+  
+  <body onload="initialBody()">
+    <header id="header">
+	</header>
+	
+	<main>
+	  <div class="content-title">
+	    已認證
+	  </div>
+	  
+	  <div class="content">
+	    <table id="aTable">
+		  <!--tr>
+		    <td>店家：</td>
+		    <td></td>
+		  </tr>
+
+		  <tr>
+		    <td>地址：</td>
+		    <td></td>
+		  </tr>
+
+		  <tr>
+		    <td>電話：</td>
+		    <td></td>
+		  </tr-->
+		</table>
+	  </div>
+	  
+	  <div class="content-title">
+	    未認證
+	  </div>
+	  
+	  <div class="content">
+	    <table id="dsaTable">
+		  
+		</table>
+	  </div>
+	  
+	  
+	</main>
+	
+	<footer id="footer">
+	</footer>
+	
+  </body>
+</html>

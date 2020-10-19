@@ -19,7 +19,7 @@ function getHeaderContent() {
 	content += '<li><a href="#" class="nav-link" onClick=jumpTo("Home.html")>首頁</a></li>';
 	content += '<li><a href="#" class="nav-link" onClick=jumpTo("Resume.html")>履歷表</a></li>';
 	content += '<li><a href="#" class="nav-link" onClick=jumpTo("Autobiography.html")>自傳</a></li>';
-	
+	content += '<li><a href="#" class="nav-link" onClick=jumpTo("YummyList.html")>口袋美食</a></li>';	
 	content += '</ul>';
 	content += '</div>';
 	content += '</nav>';
