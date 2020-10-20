@@ -63,9 +63,11 @@ main {
 	padding-bottom:40px;
 }
 
-.remind {
+.prodict-link {
 	font-size: 15px;
 	text-indent: 1em;
+	font-style: italic;
+	text-decoration:underline;
 }
 
 td {
