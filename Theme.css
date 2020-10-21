@@ -53,6 +53,7 @@ main {
 
 .content-title {
 	font-size: 30px;
+	color:#83b1c9;
 }
 
 .content {
@@ -61,6 +62,7 @@ main {
 	padding-left:40px;
 	padding-right:60px;
 	padding-bottom:40px;
+	color:#909fa6;
 }
 
 .prodict-link {
@@ -99,4 +101,23 @@ Input[type="text"] {
 input[type="checkbox"] {
 	width: 30px;
 	height: 30px;
+}
+
+a.list-group-item {
+	margin-bottom:10px;
+	width: 60%;
+	color:#917b56;
+}
+
+p.list-group-item-content {
+	overflow:hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-indent: 2em;
+	width:70%;
+}
+
+div.list-group-item-editor {
+	text-indent:2em;
+	color:#d18063;
 }
