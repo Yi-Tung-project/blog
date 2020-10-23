@@ -40,6 +40,11 @@ function jumpTo(url) {
 	document.location.href = url;
 }
 
+function openGoogleSearch(content) {
+	var ref = content.replace(' ','+');
+	window.open('http://google.com/search?q='+ref);
+}
+
 function getCookie(cookieName) {
 	var name = cookieName + "=";
 	var ca = document.cookie.split(';');
