@@ -23,18 +23,17 @@
 		var aTable = document.getElementById('aTable');
 		var dsaTable = document.getElementById('dsaTable');
 		var tableTitle = ['店家：','地址：','電話：'];
-		var aTableInfo = [['Q比Kitchen','高雄市新興區南海街16號','07-2227800']
-						 ,['赤燒分子料理','高雄市新興區東海街22-1號','0988589199']
-						 ,['28年老店《和田古早味日式料理》平價定食、炙燒焦糖鮭魚握壽司','高雄市新興區六合一路55之9號','07-2370539']
-						 ,['希ラーメン拉麵','高雄市左營區蓮池潭路121號','07-5816521']
-						 ,['鹿角13 prongs13','屏東縣屏東市公裕街155巷30弄13號','08-7666555']
-						 ,['微光 ‧ 幸福感 鄉村手作料理','屏東縣屏東市建民路17號','08-7517550']
-						 ,['巧嗑廚房Charcoal Kitchen','屏東縣屏東市民生路11號','08-7223228']
-						 ,['葉家小卷米粉','臺南市中西區國華街二段142號','06-2226142']];
+		var aTableInfo = [['Q比Kitchen','高雄市新興區南海街16號','07-2227800','+高雄+Q比Kitchen']
+						 ,['赤燒分子料理','高雄市新興區東海街22-1號','0988589199','+高雄+赤燒分子料理']
+						 ,['28年老店《和田古早味日式料理》平價定食、炙燒焦糖鮭魚握壽司','高雄市新興區六合一路55之9號','07-2370539','+28年老店+和田古早味日式料理']
+						 ,['希ラーメン拉麵','高雄市左營區蓮池潭路121號','07-5816521','+高雄+希ラーメン拉麵']
+						 ,['鹿角13 prongs13','屏東縣屏東市公裕街155巷30弄13號','08-7666555','+屏東+鹿角13']
+						 ,['微光 ‧ 幸福感 鄉村手作料理','屏東縣屏東市建民路17號','08-7517550','+屏東+微光+幸福感']
+						 ,['巧嗑廚房Charcoal Kitchen','屏東縣屏東市民生路11號','08-7223228','+屏東+巧嗑廚房']
+						 ,['葉家小卷米粉','臺南市中西區國華街二段142號','06-2226142','+臺南+葉家小卷米粉']];
 		var dsaTableInfo = [['【吉胤家】橫浜家系ラーメン','高雄市三民區慶雲街105號','從缺']
 						   ,['藝麻麻 麻辣鴨血 正忠店','高雄市三民區正忠路136號','0900136136']
 						   ,['粥老大','高雄市前鎮區一德路22號','07-3383966']
-						   ,['一本拉麵','高雄市新興區玉竹一街17巷2弄1號','07-2812920']
 						   ,['小米家 朝午和食','高雄市新興區復興二路266號','0928709668']
 						   ,['鰻魚日記miamanday','高雄市新興區民權一路249號','07-2252858']
 						   ,['阿益蕎麥涼麵綠藻麵','高雄市鳳山區鳳松路3-7號','07-7998298']
@@ -61,12 +60,21 @@
 		tableInfo.forEach(function (items) {
 			var rIndex = 0;
 			items.forEach(function (item) {
-				var row = tableObj.insertRow(cIndex++);
-				var cell = row.insertCell(0);
-				cell.innerHTML = tableTitle[rIndex++];
-				
-				cell = row.insertCell(1);
-				cell.innerHTML = item;
+				if(item[0]=='+') {
+					
+				}
+				else {
+					var row = tableObj.insertRow(cIndex++);
+					var cell = row.insertCell(0);
+					cell.innerHTML = tableTitle[rIndex++];
+					
+					var item_content = item;
+					if(item==items[0]) {
+						item_content = '<a href="#" onClick=openGoogleSearch("'+items[items.length-1]+'")>'+item+'</a>';
+					}
+					cell = row.insertCell(1);
+					cell.innerHTML = item_content;
+				}
 			});
 			var rInterval = tableObj.insertRow(cIndex++);
 			var cInterval = rInterval.insertCell(0);

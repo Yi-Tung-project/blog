@@ -41,7 +41,7 @@ function jumpTo(url) {
 }
 
 function openGoogleSearch(content) {
-	var ref = content.replace(' ','+');
+	var ref = content.replace(" ","+");
 	window.open('http://google.com/search?q='+ref);
 }
 

@@ -52,8 +52,9 @@ main {
 }
 
 .content-title {
+	font-weight:bold;
 	font-size: 30px;
-	color:#83b1c9;
+	color:#6184c6;
 }
 
 .content {
@@ -62,7 +63,12 @@ main {
 	padding-left:40px;
 	padding-right:60px;
 	padding-bottom:40px;
-	color:#909fa6;
+	color:#6184c6;
+}
+
+.key-word {
+	font-weight:bold;
+	color:#cb8a90;
 }
 
 .prodict-link {
