@@ -71,6 +71,11 @@ main {
 	color:#cb8a90;
 }
 
+.paragraph {
+	text-align:justify;
+	text-indent:2em;
+}
+
 .prodict-link {
 	font-size: 15px;
 	text-indent: 1em;
