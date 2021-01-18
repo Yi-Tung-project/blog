@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap core CSS -->
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	
+	<script src="bootstrap/jquery-3.5.1.slim.min.js"></script>
+	<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+	
+	
+    <link href="navbar.css" rel="stylesheet">
+	<script src="navbar.js"></script>
+
+	<script src="base.js"></script>
+	<link href="base.css" rel="stylesheet">
+
+	<link href="yummyList.css" rel="stylesheet">
+
+	
+	<script>
+	  function initialBody() {
+		initial();
+		var myNavbar = document.getElementById('myNavbar');
+		myNavbar.innerHTML = getNavbar();
+		
+		loadStore();
+	  }
+	  
+	  function jumpTo(url) {
+		document.location.href = url;
+	  }
+	  
+	  function loadStore() {
+		var fields = ['店家','地址','電話'];
+		var cerfitySetInfo = [['行事紅心粉圓','高雄市苓雅區林泉街4號','07-7163710','+高雄+行事紅心粉圓']];
+		var nCerfitySetInfo = [['先生Sensei千層蛋糕','高雄市前鎮區民權二路180號','07-3344527','+高雄+先生Sensei千層蛋糕']
+						   ,['步道咖啡館 Cafe Strada','高雄市苓雅區中正二路67號','07-2231881','+高雄+步道咖啡館+Cafe+Strada']
+						   ,['Sun Sun 山山','高雄市苓雅區苓雅二路241號','07-3301045','+高雄+Sun+Sun+山山']
+						   ,['猜心泡芙','高雄市苓雅區泰順街60號','0965181010','+高雄+猜心泡芙']
+						   ,['葉月堂 • 手作雪花冰專売店-富民店','高雄市鳳山區八德路二段255號','07-5507020','+高雄+葉月堂•手作雪花冰專売店-富民店']
+						   ,['東門茶樓','高雄市鼓山區東門路445號','07-5553637','+高雄+東門茶樓']
+						   ,['八德薏仁大王','高雄市新興區八德一路167號','07-2388656','+高雄+八德薏仁大王']
+						   ,['ego coffee 一格咖啡','屏東縣萬丹鄉萬丹路一段343號','08-7778999','+高雄+ego+coffee+一格咖啡']
+						   ,['冰ㄉ• かき氷','台南市東區崇善路155號','0974027042','+台南+冰ㄉ•かき氷']
+						   ,['和喫鬆餅','台南市中西區法華街15號','06-2156775','+台南+和喫鬆餅']
+						   ,['大三圓(長榮總店)','台南市北區長榮路五段306號','06-2526455','+台南+大三圓']
+						   ,['艾摩多手工杏仁豆腐','台南市中西區赤崁東街26號','06-2212381','+台南+艾摩多手工杏仁豆腐']
+						   ,['Morikoohii 森 咖啡','嘉義市東區共和路199巷1號','05-2761601','+嘉義+森咖啡']
+						   ,['東海何媽媽冰店','台中市龍井區臺灣大道五段3巷6弄28號、30號','04-26328855','+台中+東海何媽媽冰店']
+						   ,['啡蒔 Verse Cafe by Minorcode','桃園市桃園區同德十一街45號','03-3470077','+桃園+啡蒔']
+						   ,['冰雪蔬蔬','台北市萬華區環河南路二段71巷7號','02-23367168','+台北+冰雪蔬蔬']
+						   ,['藍之戀冰品豆花','新北市林口區中山路97巷17號','0905569501','+新北+藍之戀冰品豆花']];
+		
+		var cerfitySet = document.getElementById('cerfitySet');
+		cerfitySet.innerHTML = getYummySetStr(fields,cerfitySetInfo);
+		var nCerfitySet = document.getElementById('nCerfitySet');
+		nCerfitySet.innerHTML = getYummySetStr(fields,nCerfitySetInfo);
+	  }
+	  
+	  function getYummySetStr(fields,info) {
+		var str = '';
+		info.forEach(function(items) {
+			str += '<div class="yummyList-item">';
+			var index = 0;
+			var searchStrBegin = '<a href="javascript:void();"onClick=openGoogleSearch("'+items[items.length-1]+'")>';
+			var searchStrEnd = '</a>';
+			fields.forEach(function(field) {
+				var content = (index==0?searchStrBegin:'')+items[index]+(index==0?searchStrEnd:'');
+				index++;
+				str += '<div>'+field+'：'+content+'</div>';
+			});
+			str += '</div>';
+		});
+		return str;
+	  }
+	  
+	  function openGoogleSearch(content) {
+		var ref = content.replace(" ","+");
+		window.open('http://google.com/search?q='+ref);
+	  }
+	</script>
+  </head>
+  
+  <body onload=initialBody()>
+    <div id="myNavbar">
+	</div>
+	
+	<div class="container-fluid">	
+	  <main role="main">
+	    <div class="yummyList-title">
+		  已認證
+		</div>
+		
+		<div class="yummyList-set" id="cerfitySet">
+		  <div class="yummyList-item">
+		    <div>店家</div>
+		    <div>地址</div>
+		    <div>電話</div>
+		  </div>
+		  
+		</div>
+		
+		<div class="yummyList-title">
+		  未認證
+		</div>
+		
+		<div class="yummyList-set" id="nCerfitySet">
+		  <div>店家</div>
+		  <div>地址</div>
+		  <div>電話</div>
+		</div>
+		
+	  </main>
+	</div>	
+  </body>
+  
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap core CSS -->
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	
+	<script src="bootstrap/jquery-3.5.1.slim.min.js"></script>
+	<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+	
+	
+    <link href="navbar.css" rel="stylesheet">
+	<script src="navbar.js"></script>
+
+	<script src="base.js"></script>
+	<link href="base.css" rel="stylesheet">
+
+	<link href="yummyList.css" rel="stylesheet">
+
+	
+	<script>
+	  function initialBody() {
+		initial();
+		var myNavbar = document.getElementById('myNavbar');
+		myNavbar.innerHTML = getNavbar();
+		
+		loadStore();
+	  }
+	  
+	  function jumpTo(url) {
+		document.location.href = url;
+	  }
+	  
+	  function loadStore() {
+		var fields = ['店家','地址','電話'];
+		var cerfitySetInfo = [['明朗米熱狗','高雄市苓雅區林南街8號','07-2232582','+高雄+明朗米熱狗']];
+		var nCerfitySetInfo = [['HiHigh 炸海鮮生','高雄市鳳山區中山西路160號','0979891752','+高雄+HiHigh+炸海鮮生']
+						   ,['惦堂炸黑輪','高雄市前金區榮安街125號之2','0915915586','+高雄+惦堂炸黑輪']
+						   ,['小吉屋雞蛋糕','高雄市鹽埕區建國四路145號','0919621538','+高雄+小吉屋雞蛋糕']
+						   ,['歐哩桑雞蛋糕','高雄市鹽埕區建國四路340號','07-2150168','+高雄+歐哩桑雞蛋糕']
+						   ,['阿伯雞蛋糕','高雄市新興區復興二路103號','0935988308','+高雄+阿伯雞蛋糕']
+						   ,['上海生煎湯包','高雄市三民區熱河一街208號','07-3220702','+高雄+上海生煎湯包']
+						   ,['8元紅豆餅/立協鎖匙','台中市西區篤信街63號','04-22025789','+台中+8元紅豆餅/立協鎖匙']
+						   ,['豪傳說雞排（二林創始店）','彰化縣二林鎮中正路41號','0968128856','+彰化+豪傳說雞排']];
+		
+		var cerfitySet = document.getElementById('cerfitySet');
+		cerfitySet.innerHTML = getYummySetStr(fields,cerfitySetInfo);
+		var nCerfitySet = document.getElementById('nCerfitySet');
+		nCerfitySet.innerHTML = getYummySetStr(fields,nCerfitySetInfo);
+	  }
+	  
+	  function getYummySetStr(fields,info) {
+		var str = '';
+		info.forEach(function(items) {
+			str += '<div class="yummyList-item">';
+			var index = 0;
+			var searchStrBegin = '<a href="javascript:void();"onClick=openGoogleSearch("'+items[items.length-1]+'")>';
+			var searchStrEnd = '</a>';
+			fields.forEach(function(field) {
+				var content = (index==0?searchStrBegin:'')+items[index]+(index==0?searchStrEnd:'');
+				index++;
+				str += '<div>'+field+'：'+content+'</div>';
+			});
+			str += '</div>';
+		});
+		return str;
+	  }
+	  
+	  function openGoogleSearch(content) {
+		var ref = content.replace(" ","+");
+		window.open('http://google.com/search?q='+ref);
+	  }
+	</script>
+  </head>
+  
+  <body onload=initialBody()>
+    <div id="myNavbar">
+	</div>
+	
+	<div class="container-fluid">	
+	  <main role="main">
+	    <div class="yummyList-title">
+		  已認證
+		</div>
+		
+		<div class="yummyList-set" id="cerfitySet">
+		  <div class="yummyList-item">
+		    <div>店家</div>
+		    <div>地址</div>
+		    <div>電話</div>
+		  </div>
+		  
+		</div>
+		
+		<div class="yummyList-title">
+		  未認證
+		</div>
+		
+		<div class="yummyList-set" id="nCerfitySet">
+		  <div>店家</div>
+		  <div>地址</div>
+		  <div>電話</div>
+		</div>
+		
+	  </main>
+	</div>	
+  </body>
+  
+</html>

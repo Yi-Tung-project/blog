@@ -1,0 +1,31 @@
+
+.yummyList-title {
+	font-weight:bold;
+	font-size: 30px;
+	color:#6184c6;
+}
+
+.yummyList-set {
+	font-size: 25px;
+	padding-top:40px;
+	padding-left:40px;
+	padding-right:60px;
+	padding-bottom:40px;
+	color:#6184c6;
+}
+
+.yummyList-keyword {
+	font-weight:bold;
+	color:#cb8a90;
+}
+
+.yummyList-item {
+	padding-bottom:40px;
+}
+
+/** keyword:響應式斷點 **/
+@media screen and (max-width: 600px) {
+	.yummyList-set {
+		font-size: 20px;
+	}
+}

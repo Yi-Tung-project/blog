@@ -1,169 +1,165 @@
+<!DOCTYPE html>
 <html>
   <head>
-    
-	<meta charset="utf-8">     
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">     
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">  
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap core CSS -->
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	
-	<link rel="styleSheet" href="Theme.css" />  <!--將自己設定的主題載入-->
-	<script src="info.js"></script>
+	<script src="bootstrap/jquery-3.5.1.slim.min.js"></script>
+	<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+	
+	
+    <link href="navbar.css" rel="stylesheet">
+	<script src="navbar.js"></script>
+
+	<script src="base.js"></script>
+    <link href="base.css" rel="stylesheet">
+    <link href="list.css" rel="stylesheet">
+
+	
 	<script>
 	  function initialBody() {
 		initial();
-		var footerElement = document.getElementById('footer');
-		footerElement.innerHTML = getFooterContent();
-		var headerElement = document.getElementById('header');
-		headerElement.innerHTML = getHeaderContent();
+		var myNavbar = document.getElementById('myNavbar');
+		myNavbar.innerHTML = getNavbar();
+	  }
+	  
+	  function jumpTo(url) {
+		document.location.href = url;
 	  }
 	</script>
   </head>
   
-  <body onload="initialBody()">
-    <header id="header">
-	</header>
+  <body onload=initialBody()>
+    <div id="myNavbar">
+	</div>
 	
-	<main>
-	  <div class="content-title">
-	    個人資料
-	  </div>
-	  
-	  <div class="content">
-		<table>
-		  <tr>
-		    <td></td>
-		    <td></td>
-		  </tr>
-		</table>
-	  </div>
-	  
-	  <div class="content-title">
-	    專長
-	  </div>
-	  
-	  <div class="content">
-		<ul>
+	<div class="container-fluid">
+	  <main role="main">
+	    <div class="list-title">
+		  專長
+		</div>
+		<div class="list-item">
+		  <ul>
 		    <li>
-			  <span class="key-word">C 語言</span>
+			  <span class="list-keyword">C語言</span>
 			  <ol>
 			    <li>協助Arduino程式開發。</li>
 			  </ol>
 			</li>
 			
-		    <li>
-			  <span class="key-word">JAVA</span>
+			<li>
+			  <span class="list-keyword">JAVA</span>
 			  <ol>
 			    <li>軟體程式設計，供使用者繪製簡易的ERP系統並將其儲存成圖檔。</li>
-			    <li>協助Android程式開發。</li>
+				<li>協助Android手機程式開發。</li>
 			  </ol>
 			</li>
 			
-		    <li>
-			  <span class="key-word">C#</span>
+			<li>
+			  <span class="list-keyword">C#</span>
 			  <ol>
-			    <li>協助Unity程式開發，並於程式中封裝各功能。</li>
+			    <li>協助Unity程式開發。</li>
 			  </ol>
 			</li>
 			
-		    <li>
-			  <span class="key-word">HTML</span>
+			<li>
+			  <span class="list-keyword">HTML</span>
 			  <ol>
-			    <li>網頁程式設計，設定網頁內容與相關成員及事件。</li>
+			    <li>網頁程式設計，設定網頁內容與成員及事件。</li>
 			    <li>嵌入Unity匯出之網頁版本。</li>
 			  </ol>
 			</li>
 			
-		    <li>
-			  <span class="key-word">CSS</span>
+			<li>
+			  <span class="list-keyword">CSS</span>
 			  <ol>
 			    <li>網頁程式設計，修改HTML的成員樣式。</li>
 			    <li>針對Bootstrap框架，修改其相關樣式。</li>
 			  </ol>
 			</li>
 			
-		    <li>
-			  <span class="key-word">Javascript</span>
+			<li>
+			  <span class="list-keyword">Javascript</span>
 			  <ol>
 			    <li>網頁程式設計，利用DOM介面與HTML的成員作溝通。</li>
 			    <li>對伺服器發送請求，藉與PHP溝通而取得伺服器資料。</li>
+			    <li>回應使用者的操作，例如：按鈕的點擊事件、顯示提醒使用者的訊息。</li>
 			    <li>與嵌入之Unity的網頁版本進行溝通。</li>
-			    <li>回應使用者的操作，例如：按鈕的點擊事件、顯示提醒使用的文字。</li>
 			  </ol>
 			</li>
 			
-		    <li>
-			  <span class="key-word">PHP</span>
+			<li>
+			  <span class="list-keyword">PHP</span>
 			  <ol>
 			    <li>與MySQL資料庫作溝通。</li>
 			    <li>回應來自前端的請求，例如：Javascript、Unity。</li>
-			    <li>產生PDF檔，方便使用者進行下載、列印。</li>
-			    <li>產生EXCEL檔，供使用者下載，為達到報表處理。</li>
-			    <li>自動傳送EMAIL，供使用者查詢隱密資料。</li>
 			  </ol>
 			</li>
 			
-		    <li>
-			  <span class="key-word">Arduino</span>
+			<li>
+			  <span class="list-keyword">Arduino</span>
 			  <ol>
 			    <li>利用UNO核心板與周邊設備進行溝通，例如：按鈕、開關。</li>
-			    <li>利用mini核心板與HC-06藍芽模組作溝通，並與Android程式進行資料接收與傳輸。</li>
+			    <li>利用mini核心板與HC-06藍芽模組作溝通，並與Android手機程式進行資料接收與傳輸。</li>
 			  </ol>
 			</li>
 			
-		    <li>
-			  <span class="key-word">Android</span>
+			<li>
+			  <span class="list-keyword">Android</span>
 			  <ol>
-			    <li>利用藍芽技術與被Arduino操控的HC-06藍芽模組進行資料接收與傳輸，並將接收到的資料運用Google Maps API製成路徑。</li>
+			    <li>利用藍芽技術與HC-06藍芽模組進行資料接收與傳輸。</li>
+			    <li>將大量經緯度資料運用Google Maps API製成軌跡路線。</li>
 			    <li>利用相機與虛擬物件的疊層效果，以達到簡易擴增實境的效果。</li>
 			  </ol>
 			</li>
 			
-		    <li>
-			  <span class="key-word">Unity</span>
+			<li>
+			  <span class="list-keyword">Unity</span>
 			  <ol>
-			    <li>遊戲程式設計，2D小遊戲製作。</li>
+			    <li>遊戲程式設計，2D小遊戲開發。</li>
 			    <li>對伺服器發送請求，藉與PHP溝通而取得伺服器資料。</li>
-			    <li>接收Javascript送過來的資料，依該資料作為後續流程的依據。</li>
+			    <li>接收Javascript傳送的資料，依該資料作為後續流程的依據。</li>
 			    <li>傳送資料到下一個網頁，依該資料作為下一頁的依據。</li>
 			  </ol>
 			</li>
 			
-		    <li>
-			  <span class="key-word">Bootstrap</span>
+			<li>
+			  <span class="list-keyword">Bootstrap</span>
 			  <ol>
 			    <li>網頁程式設計，協助HTML各元件的樣式成為所需之樣式。</li>
 			  </ol>
 			</li>
 			
-		    <li>
-			  <span class="key-word">UML</span>
+			<li>
+			  <span class="list-keyword">UML</span>
 			  <ol>
 			    <li>協助物件導向程式開發，將程式流程、功能流程、各程式之類別關係、程式運行的狀態清楚描繪，以達到流程與程式的明確性。</li>
 			  </ol>
 			</li>
-			
-		</ul>
-	  </div>
-	  
-	  <div class="content-title">
-	    證照
-	  </div>
-	  
-	  <div class="content">
-		<ul>
+		  </ul>
+		</div>
+		
+		<div class="list-title">
+		  證照
+		</div>
+		<div class="list-item">
+		  <ul>
 		    <li>TQC+ 程式語言</li>
 		    <li>TQC+ 物件導向程式語言</li>
 		    <li>電腦軟體應用</li>
 		    <li>工業電子</li>
-		</ul>
-	  </div>
-	  
-	  <div class="content-title">
-	    經歷
-	  </div>
-	  
-	  <div class="content">
-		<ul>
+		  </ul>
+		</div>
+		
+		<div class="list-title">
+		  經歷
+		</div>
+		<div class="list-item">
+		  <ul>
 		    <li>2017<a href="javascript:void();" onClick="window.open('http://www.yiuhwa.com.tw/')">育華興業股份有限公司</a>實習</li>
 		    <li>2017屏大創意APP競賽</li>
 		    <li>2017屏大行動多媒體成果發表會</li>
@@ -171,17 +167,10 @@
 		    <li>2018屏大資訊學院實務專題成果競賽－智慧電子創新設計組《佳作》</li>
 		    <li>2018第二屆屏大創意黑客松競賽</li>
 		    <li>2018數位生活研討會《最佳論文獎》</li>
-		</ul>
-		
-	  </div>
-	  
-	  
-	  
-	  
-	</main>
-	
-	<footer id="footer">
-	</footer>
-	
+		  </ul>
+		</div>
+	  </main>
+	</div>
   </body>
+  
 </html>

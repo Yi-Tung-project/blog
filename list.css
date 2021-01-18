@@ -1,0 +1,46 @@
+
+.list-title {
+	font-weight:bold;
+	font-size: 30px;
+	color:#6184c6;
+}
+
+.list-item {
+	font-size: 20px;
+	padding-top:40px;
+	padding-left:40px;
+	padding-right:60px;
+	padding-bottom:40px;
+	color:#6184c6;
+}
+
+.list-keyword {
+	font-weight:bold;
+	color:#cb8a90;
+}
+
+.prodict-link {
+	font-size: 15px;
+	text-indent: 1em;
+	font-style: italic;
+	text-decoration:underline;
+}
+
+a.list-group-item {
+	margin-bottom:10px;
+	width: 60%;
+	color:#917b56;
+}
+
+p.list-group-item-content {
+	overflow:hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-indent: 2em;
+	width:70%;
+}
+
+div.list-group-item-editor {
+	text-indent:2em;
+	color:#d18063;
+}

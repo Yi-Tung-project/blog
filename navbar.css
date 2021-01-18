@@ -1,0 +1,44 @@
+body {
+!  padding-bottom: 20px;
+}
+
+.navbar {
+!  margin-bottom: 20px;
+}
+
+.bd-placeholder-img {
+	font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+	.bd-placeholder-img-lg {
+		font-size: 3.5rem;
+	}
+}
+
+.navbar-theme {
+	background: #83b1c9;
+	color: #ffffff;
+	font-size: 35px;
+	box-shadow: 0px 3px 8px 0px #000;
+}
+
+.dropdown-menu {
+	background: #83b1c9;
+}
+
+.dropdown-item {
+	color: #ffffff;
+	font-size: 25px;
+	text-align: center;
+}
+
+.dropdown-item:active {
+	background-color: #83b1c9;
+	color: #e60012;
+}
