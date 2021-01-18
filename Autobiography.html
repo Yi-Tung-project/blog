@@ -1,57 +1,67 @@
+<!DOCTYPE html>
 <html>
   <head>
-    
-	<meta charset="utf-8">     
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">     
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">  
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap core CSS -->
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	
-	<link rel="styleSheet" href="Theme.css" />  <!--將自己設定的主題載入-->
-	<script src="info.js"></script>
+	<script src="bootstrap/jquery-3.5.1.slim.min.js"></script>
+	<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+	
+	
+    <link href="navbar.css" rel="stylesheet">
+	<script src="navbar.js"></script>
+
+	<script src="base.js"></script>
+	<link href="base.css" rel="stylesheet">
+    <link href="article.css" rel="stylesheet">
+
+	
 	<script>
 	  function initialBody() {
 		initial();
-		var footerElement = document.getElementById('footer');
-		footerElement.innerHTML = getFooterContent();
-		var headerElement = document.getElementById('header');
-		headerElement.innerHTML = getHeaderContent();
+		var myNavbar = document.getElementById('myNavbar');
+		myNavbar.innerHTML = getNavbar();
+	  }
+	  
+	  function jumpTo(url) {
+		document.location.href = url;
 	  }
 	</script>
   </head>
   
-  <body onload="initialBody()">
-    <header id="header">
-	</header>
+  <body onload=initialBody()>
+    <div id="myNavbar">
+	</div>
 	
-	<main>
-	  <div class="content-title">
-	    家庭背景
-	  </div>
-	  
-	  <div class="content paragraph">
-	    我的爸爸跟媽媽，自我年幼之時，便開了間早餐店，我跟哥哥在閒暇之餘會一起去店裡幫忙，雖然我們都是幫忙一些相對簡單的小事，不過卻見識各種待人處事的方式，也同時培養出我<span class="key-word">察言觀色的習慣</span>，而在平常的生活中，他們也經常利用身邊的大小事情對我進行機會教育，也因此培養出我對各事物的<span class="key-word">聯想力</span>。我的哥哥，目前是一位職業軍人，雖然在同個家庭出生也共同成長，選擇卻截然不同，不過也因此讓我學會<span class="key-word">尊重每個人</span>的選擇及想法，小時候的我們感情十分要好，即便有時會產生摩擦，但我仍然喜歡跟在他身邊，<span class="key-word">因為喜歡，所以不輕易放棄</span>。我的家庭，總是會支持我去做我認為對的事情，所以當遇到困難時，我便會想盡辦法來解決，<span class="key-word">不希望辜負支持著我的人</span>，即便遇到了挫敗，我仍會再次振作。
-	  </div>
-	  
-	  <div class="content-title">
-	    求學經歷
-	  </div>
-	  
-	  <div class="content">
+	<div class="container-fluid">	
+	  <main role="main">
+	    <div class="article">
+	      <div class="article-title">
+		    家庭背景
+		  </div>
+		  <div class="paragraph">
+		    我的爸爸跟媽媽，自我年幼之時，便開了間早餐店，我跟哥哥在閒暇之餘會一起去店裡幫忙，雖然我們都是幫忙一些相對簡單的小事，不過卻見識各種待人處事的方式，也同時培養出我<span class="article-keyword">察言觀色的習慣</span>，而在平常的生活中，他們也經常利用身邊的大小事情對我進行機會教育，也因此培養出我對各事物的<span class="article-keyword">聯想力</span>。我的哥哥，目前是一位職業軍人，雖然在同個家庭出生也共同成長，選擇卻截然不同，不過也因此讓我學會<span class="article-keyword">尊重每個人</span>的選擇及想法，小時候的我們感情十分要好，即便有時會產生摩擦，但我仍然喜歡跟在他身邊，<span class="article-keyword">因為喜歡，所以不輕易放棄</span>。我的家庭，總是會支持我去做我認為對的事情，所以當遇到困難時，我便會想盡辦法來解決，<span class="article-keyword">不希望辜負支持著我的人</span>，即便遇到了挫敗，我仍會再次振作。
+		  </div>
+		</div>
+		
+	    <div class="article-title">
+		  求學經歷
+		</div>
 		<div class="paragraph">
-		  大學時期，一、二年級的我，雖然沒有非常認真在課業的部分，但是後來我從頭開始自學不足之處，使得後面的科目沒有一面倒；三年級的軟體工程課程中，我與朋友分組利用UML將程式的詳細資料記錄成文件並在最後使用Java寫出一套簡易的ERP系統；三升四年級的暑假，我進入育華興業股份有限公司進行實習，開發一套異常警報訊息發送系統，最後也為此系統製作文件，供公司作為後續的維護及修改之參考；後來，開始製作專題，在這個期間，有一位碩士學長會跟我們每個星期定期開會來關注我們的專題進度及問題討論，而在過程中，我都會跟學長進行交流，例如：最近的研究、未來規劃，最後學長也特別推薦我讀碩士；在製作專題的途中，我還額外與朋友相約參加第一屆的屏大黑客松競賽，在比賽最後也取得《佳作》；四年級的時候，我跟專題組員參加校內舉辦的實務專題成果競賽，在比賽最後也取得《智慧電子創新設計組》的《佳作》；最後一個學期，我接下了實驗室跟校外單位接的案子，且在這個學期也同時上修碩士課程。
-		<div>
-		
-		<br/>
-		
+		  大學時期，一、二年級的我，雖然沒有非常認真在課業的部分，但是後來我從頭開始自學不足之處，使得後面的科目沒有一面倒；三年級的軟體工程課程中，我與朋友利用UML將程式的詳細資料記錄成文件並在最後使用Java<span class="article-keyword">寫出一套簡易的ERP系統</span>；三升四年級的暑假，我進入育華興業股份有限公司進行<span class="article-keyword">實習</span>，<span class="article-keyword">開發一套異常警報訊息發送系統</span>，最後也為此系統製作文件，供公司作為後續的維護及修改之參考；後來，開始製作專題，在這個期間，有一位碩士學長會跟我們每個星期定期開會來關注我們的專題進度及問題討論，而在過程中，我都會跟學長進行交流，例如：最近的研究、未來規劃，最後學長也特別推薦我讀碩士；在製作專題的途中，我還額外與朋友相約<span class="article-keyword">參加第一屆的屏大黑客松競賽</span>，在比賽最後也取得<span class="article-keyword">《佳作》</span>；四年級的時候，我跟專題組員參加校內舉辦的<span class="article-keyword">實務專題成果競賽</span>，在比賽最後也取得<span class="article-keyword">《智慧電子創新設計組》的《佳作》</span>；後來，我還將專題製作時用到的部分技術撰寫成一篇會議論文投稿至<span class="article-keyword">2018數位生活研討會</span>，並被選為<span class="article-keyword">《最佳論文獎》</span>；最後一個學期，我接下了實驗室跟校外單位接的案子，且在這個學期也同時<span class="article-keyword">上修碩士課程</span>。
+		</div>
+		<div class="paragraph">
+		  碩士時期，我首先<span class="article-keyword">結案大學時期所接下的案子</span>，後來，同一個廠商又陸續發了幾個案子給我們的實驗室，而那些案子主要也是由我負責，在案子進行的過程，我會<span class="article-keyword">直接與廠商接洽</span>討論關於功能、流程與使用者介面的部分，並進行開發實作；後來，我又再次與朋友相約參加<span class="article-keyword">第二屆屏大黑客松競賽</span>，雖然這次的參賽並沒有獲獎，但是卻讓我們發現於過程中我們所疏忽考慮的部分－創意必須要與實際的市場需求共存；最後，我的畢業論文順利完成研究與撰寫並通過委員的口試測驗。
+		</div>
 		<div class="paragraph">
 		  
-		<div>
-	  </div>
-	  
-	</main>
-	
-	<footer id="footer">
-	</footer>
-	
+		</div>
+	  </main>
+	</div>	
   </body>
+  
 </html>
