@@ -26,6 +26,8 @@
 		initial();
 		var myNavbar = document.getElementById('myNavbar');
 		myNavbar.innerHTML = getNavbar();
+		var YummyItem = document.getElementById('YummyItem');
+		YummyItem.setAttribute('class',YummyItem.getAttribute('class')+' active');
 		
 		loadStore();
 	  }

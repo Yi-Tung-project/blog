@@ -14,6 +14,9 @@
 	
     <link href="navbar.css" rel="stylesheet">
 	<script src="navbar.js"></script>
+	
+	<link href="bottomNavbar.css" rel="stylesheet">
+	<script src="bottomNavbar.js"></script>
 
 	<script src="base.js"></script>
     <link href="base.css" rel="stylesheet">
@@ -25,6 +28,13 @@
 		initial();
 		var myNavbar = document.getElementById('myNavbar');
 		myNavbar.innerHTML = getNavbar();
+		var HomeItem = document.getElementById('HomeItem');
+		HomeItem.setAttribute('class',HomeItem.getAttribute('class')+' active');
+		
+		var myBottomNavbar = document.getElementById('myBottomNavbar');
+		myBottomNavbar.innerHTML = getBottomNavbar();
+		var ResumeItem = document.getElementById('ResumeItem');
+		ResumeItem.setAttribute('class','active');
 	  }
 	  
 	  function jumpTo(url) {
@@ -35,6 +45,9 @@
   
   <body onload=initialBody()>
     <div id="myNavbar">
+	</div>
+	
+	<div id="myBottomNavbar">
 	</div>
 	
 	<div class="container-fluid">

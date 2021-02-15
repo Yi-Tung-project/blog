@@ -14,16 +14,27 @@
 	
     <link href="navbar.css" rel="stylesheet">
 	<script src="navbar.js"></script>
+	
+	<link href="bottomNavbar.css" rel="stylesheet">
+	<script src="bottomNavbar.js"></script>
 
 	<script src="base.js"></script>
     <link href="base.css" rel="stylesheet">
 	
+	<link href="home.css" rel="stylesheet">
 	
 	<script>
 	  function initialBody() {
 		initial();
 		var myNavbar = document.getElementById('myNavbar');
 		myNavbar.innerHTML = getNavbar();
+		var HomeItem = document.getElementById('HomeItem');
+		HomeItem.setAttribute('class',HomeItem.getAttribute('class')+' active');
+		
+		var myBottomNavbar = document.getElementById('myBottomNavbar');
+		myBottomNavbar.innerHTML = getBottomNavbar();
+		var CVItem = document.getElementById('CVItem');
+		CVItem.setAttribute('class','active');
 	  }
 	  
 	  function jumpTo(url) {
@@ -36,9 +47,57 @@
     <div id="myNavbar">
 	</div>
 	
+	<div id="myBottomNavbar">
+	</div>
+	
 	<div class="container-fluid">
 	  <main role="main">
-		
+		<div>
+		  <div class="Home-title">姓名：tung</div>
+		  
+		  <div class="Home-title">學歷：</div>
+		  <div class="Home-item">
+		    <ul>
+			  <li  class="Home-item">
+			    屏東大學 碩士班（2018 / 09～2020 / 08）
+				<div class="remark" style="text-indent:1em;">
+				  <a href="https://ndltd.ncl.edu.tw/cgi-bin/gs32/gsweb.cgi/login?o=dnclcdr&s=id=%22108NPTU0392012%22.&searchmode=basic">
+				    <span class="prodict-link">基於色彩偵測及型態補償之手部辨識</span>
+				  </a>（畢業論文）
+				</div>
+			  </li>
+			  <li class="Home-item">
+			    屏東大學 學士班（2014 / 09～2018 / 06）
+				<div class="remark" style="text-indent:1em;">
+				  <span class="">運動管理員Sport Manager</span>（畢業專題）
+				</div>
+			  </li>
+			  <li class="Home-item">中山工商（2010 / 09～2014 / 06）<ul></ul></li>
+			</ul>
+		  </div>
+		  
+		  <div class="Home-title">求學經歷：</div>
+		  <div class="Home-item">
+		    <ul>
+			  <li class="Home-item">第十八屆數位生活科技研討會《最佳論文》（2018 / 06）<ul></ul></li>
+			  <li class="Home-item">屏大資訊學院實務專題成果競賽－智慧電子創新設計組《佳作》（2017 / 12）<ul></ul></li>
+			  <li class="Home-item">育華興業股份有限公司 實習（2017 / 06～2017 / 08）<ul></ul></li>
+			  <li class="Home-item">第一屆屏大創意黑客松競賽《佳作》（2017 / 05）<ul></ul></li>
+			</ul>
+		  </div>
+		  
+		  <div class="Home-title">實務經歷：</div>
+		  <div class="Home-item">
+		    <ul>
+			  <li class="Home-item">全國高中職專題競賽網站建置（2020 / 10～2020 / 12）<ul></ul></li>
+			  <li class="Home-item">雙十連假親子體驗營隊之網頁問答遊戲（2020 / 08～2020 / 09）<ul></ul></li>
+			  <li class="Home-item">稅務觀念宣導遊戲網頁版開發（2019 / 05～2019 / 11）<ul></ul></li>
+			  <li class="Home-item">稅務知識小尖兵比賽活動之體驗遊戲（2018 / 09～2018 / 11）<ul></ul></li>
+			  <li class="Home-item">阿緱手遊之稅務謎城遊戲建置（2018 / 04～2018 / 12）<ul></ul></li>
+			</ul>
+		  </div>
+		  
+		</div>
 	  </main>
 	</div>
   </body>
