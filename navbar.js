@@ -1,7 +1,7 @@
 
 function getNavbar() {
 	var content = '';
-	content += '<nav class="navbar navbar-expand-md navbar-dark navbar-theme">';
+	content += '<nav class="navbar navbar-expand-md navbar-dark fixed-top navbar-theme">';
 	/**網站名稱or圖示**/
 //	content += '<a class="navbar-brand" href="#">測試網站</a>';
 	content += '<img src="images/wIcon.ico" />';
