@@ -29,3 +29,9 @@ body {
   background-color: #65c294;
   color: #ffffff;
 }
+
+@media screen and (max-width: 600px) {
+	.bottom-navbar a {
+		font-size: 25px;
+	}
+}
