@@ -26,29 +26,13 @@
 	<script>
 	  function initialBody() {
 		initial();
-		var myNavbar = document.getElementById('myNavbar');
-		myNavbar.innerHTML = getNavbar();
-		var HomeItem = document.getElementById('HomeItem');
-		HomeItem.setAttribute('class',HomeItem.getAttribute('class')+' active');
-		
-		var myBottomNavbar = document.getElementById('myBottomNavbar');
-		myBottomNavbar.innerHTML = getBottomNavbar();
-		var ResumeItem = document.getElementById('ResumeItem');
-		ResumeItem.setAttribute('class','active');
-	  }
-	  
-	  function jumpTo(url) {
-		document.location.href = url;
 	  }
 	</script>
   </head>
   
   <body onload=initialBody()>
-    <div id="myNavbar">
-	</div>
-	
-	<div class="container-fluid">
-	  <main role="main">
+    
+	<div style="padding-left:2.5%">
 	    <div class="list-title">
 		  專長
 		</div>
@@ -246,10 +230,6 @@
 		  <div class="card-header">2018 數位生活研討會《最佳論文獎》</div>
 		</div>
 		
-	  </main>
-	</div>
-	
-	<div id="myBottomNavbar">
 	</div>
   </body>
   

@@ -28,3 +28,25 @@ main {
 .container-fluid {
 	padding: 0px; !full-screen
 }
+
+.card-header {
+	color:#6184c6;
+	font-weight:bold;
+	font-size: 20px;
+	background-color: #d1dfe8;
+}
+
+.link {
+	color:#cb8a90;
+}
+
+.card-block {
+	color:#6184c6;
+	font-weight:bold;
+	font-size: 20px;
+	background-color: #d1e7e8;
+}
+
+.card {
+	background-color: #d1dfef;
+}
