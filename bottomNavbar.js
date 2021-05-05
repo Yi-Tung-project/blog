@@ -12,6 +12,7 @@ function getBottomNavbar() {
 	content += '<a id="CVItem" href="#" onClick=onClickEvent("Home")'+(useCookie && activePage=='Home'?' class="active"':'')+'>簡歷</a>';
 	content += '<a id="AutobiographyItem" href="#" onClick=onClickEvent("Autobiography") '+(useCookie && activePage=='Autobiography'?' class="active"':'')+'>自傳</a>';
 	content += '<a id="ResumeItem" href="#" onClick=onClickEvent("Resume")'+(useCookie && activePage=='Resume'?' class="active"':'')+'>履歷表</a>';
+	content += '<a id="PortfolioItem" href="#" onClick=onClickEvent("Portfolio")'+(useCookie && activePage=='Portfolio'?' class="active"':'')+'>作品集</a>';
 	content += '</div>';
 	return content;
 }

@@ -1,0 +1,14 @@
+
+.portfolio-title {
+	font-weight:bold;
+	font-size: 25px;
+	color:#6184c6;
+	width:500px;
+	height:80px;
+	text-align:center;
+}
+
+.portfolio-img {
+	width:500px;
+	height:333px;
+}
