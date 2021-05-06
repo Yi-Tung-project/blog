@@ -1,11 +1,14 @@
 
+main {
+	text-align:center;
+}
+
 .portfolio-title {
 	font-weight:bold;
 	font-size: 25px;
 	color:#6184c6;
-	width:500px;
+	width:wrap;
 	height:80px;
-	text-align:center;
 }
 
 .portfolio-img {
@@ -19,7 +22,6 @@
 		height:111px;
 	}
 	.portfolio-title {
-		width:167px;
 		height:27px;
 		font-size: 14px;
 	}
