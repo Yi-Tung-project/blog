@@ -12,3 +12,15 @@
 	width:500px;
 	height:333px;
 }
+
+@media screen and (max-width: 600px) {
+	.portfolio-img {
+		width:167px;
+		height:111px;
+	}
+	.portfolio-title {
+		width:167px;
+		height:27px;
+		font-size: 14px;
+	}
+}
