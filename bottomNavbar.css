@@ -32,6 +32,6 @@ body {
 
 @media screen and (max-width: 600px) {
 	.bottom-navbar a {
-		font-size: 25px;
+		font-size: 18px;
 	}
 }
